@@ -1,0 +1,12 @@
+POST Create
+      Product
+POST Delete
+      Product
+POST Update
+      Product
+GET Get
+      Product
+      Products
+
+
+Admin
