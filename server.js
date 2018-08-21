@@ -21,7 +21,5 @@ require('./routes/routes.js')(app);
 MongoClient.connect('mongodb://'+config.production.database.username+':'+config.production.database.password+'@ds257851.mlab.com:57851/testhb', { useNewUrlParser: true }, (err, client) =>{
   if(err) return console.log(err);
   db = client.db('testhb');
-  app.listen(3000, function(){
-  console.log('CibolaBurn, port 3000');
-  })
+  app.listen(process.env.PORT, '0.0.0.0')
 })
