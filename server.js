@@ -12,6 +12,7 @@ const app = express();
 app.use(cors());
 
 //initializes body-parser
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 // app.set('view engine', 'ejs');
 // app.use('views', path.join(__dirname + '/views'));
