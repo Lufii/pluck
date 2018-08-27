@@ -5,10 +5,11 @@ const MongoClient = require('mongodb').MongoClient;
 const config = require('./config.js');
 // https://nodejs.org/api/path.html
 const path = require('path');
+const cors = require('cors');
 
 // initializes express
 const app = express();
-
+ap.use(cors());
 //initializes body-parser
 app.use(bodyParser.urlencoded({extended:true}));
 // app.set('view engine', 'ejs');
