@@ -10,6 +10,7 @@ const cors = require('cors');
 // initializes express
 const app = express();
 ap.use(cors());
+app.options('*', cors());
 //initializes body-parser
 app.use(bodyParser.urlencoded({extended:true}));
 // app.set('view engine', 'ejs');
