@@ -1,7 +1,6 @@
 const controllerRoutes = require('../controllers/routing.js');
 const controllerAuth = require('../controllers/auth.js');
 module.exports = (app) =>{
-app.options('*', cors());
 //Returns all products
 app.get('/products', /*controllerAuth.verifyToken,*/ controllerRoutes.getProducts);
 
