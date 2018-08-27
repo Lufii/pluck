@@ -9,7 +9,7 @@ const cors = require('cors');
 
 // initializes express
 const app = express();
-ap.use(cors());
+app.use(cors());
 
 //initializes body-parser
 app.use(bodyParser.urlencoded({extended:true}));
