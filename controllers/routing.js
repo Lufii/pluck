@@ -2,10 +2,8 @@ module.exports = {
 
   createProduct: (req, res) => {
     db.collection('products').save(req.body, (err, result) => {
-      if (err) return console.log(err);{
+      if (err) return console.log(err);
         console.log('Saved item to DB')
-        return err;
-      }
         res.json(result);
         })
     },
