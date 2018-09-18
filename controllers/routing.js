@@ -30,7 +30,7 @@ module.exports = {
       type: req.body.type,
       area: req.body.area,
       stock: req.body.stock,
-      mpb: req.body.mpb
+      mppb: req.body.mppb
     }
   },
    (err, result) => {
