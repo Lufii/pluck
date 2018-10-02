@@ -3,18 +3,18 @@ module.exports = {
   createProduct: (req, res) => {
     db.collection('products').save(req.body, (err, result) => {
       if (err) return console.log(err);
-        console.log('Saved item to DB')
-        res.json(result);
-        })
-    },
-
+      console.log('Saved item to DB')
+      res.json(result);
+    })
+  },
+  
   getProduct: (req, res) => {
     db.collection('products').find({'name':req.query.name}).toArray(  function(err, result){
-        console.log(result);
-        res.json(result);
+      console.log(result);
+      res.json(result);
     })
 
-    },
+  },
 
   getProducts: (req, res) => {
     db.collection('products').find().toArray(function(err, results){
@@ -26,14 +26,14 @@ module.exports = {
 
   updateProduct: (req,res) => {
     db.collection('products').updateOne({'name':req.body.name}, {
-    $set: {
-      type: req.body.type,
-      area: req.body.area,
-      stock: req.body.stock,
-      mppb: req.body.mppb
-    }
-  },
-   (err, result) => {
+      $set: {
+        type: req.body.type,
+        area: req.body.area,
+        stock: req.body.stock,
+        mppb: req.body.mppb
+      }
+    },
+    (err, result) => {
       if (err) return console.log(err);
       console.log('deleted from database', result);
       res.json(result);
