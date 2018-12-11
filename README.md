@@ -2,7 +2,7 @@ Back-end for warehouse management system. Basic CRUD operations.
 
 Endpoints:
 
-'/products' &nbsp
+'/products' <br/>
 Will return all the products in the DB
 
 '/product?name=example' &nbsp
