@@ -11,14 +11,13 @@
   "author": "Dani A",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "^2.0.3",
     "cors": "^2.8.4",
-    "express": "^4.16.3",
-    "mongodb": "^3.1.1",
-    "npm": "^6.3.0"
+    "express": "^5.0.3",
+    "mongodb": "^7.0.0"
   },
   "devDependencies": {
-    "nodemon": "^1.18.3"
+    "nodemon": "^3.0.0"
   },
   "repository": {
     "type": "git",
