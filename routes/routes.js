@@ -1,23 +1,18 @@
-const controllerRoutes = require('../controllers/routing.js');
-const controllerAuth = require('../controllers/auth.js');
-module.exports = (app) =>{
-  //Returns all products
-  app.get('/products', /*controllerAuth.verifyToken,*/ controllerRoutes.getProducts);
+const controllerRoutes = require("../controllers/routing.js");
 
-  //returns 1 product
-  app.get('/product', /*controllerAuth.verifyToken,*/  controllerRoutes.getProduct);
+module.exports = (app) => {
+    //Returns all products
+    app.get("/products", controllerRoutes.getProducts);
 
-  //Creates a product
-  app.post('/product/create', /*controllerAuth.verifyToken,*/  controllerRoutes.createProduct);
+    //returns 1 product
+    app.get("/product", controllerRoutes.getProduct);
 
-  //Deletes a product via 'name'
-  app.post('/product/delete', /*controllerAuth.verifyToken,*/  controllerRoutes.deleteProduct);
+    //Creates a product
+    app.post("/product/create", controllerRoutes.createProduct);
 
-  //Updates a product via 'name'
-  app.post('/product/update',  /*controllerAuth.verifyToken,*/ controllerRoutes.updateProduct);
+    //Deletes a product via 'name'
+    app.post("/product/delete", controllerRoutes.deleteProduct);
 
-  //////////////////////////////////////////////////////////////////
-  //app.post('/user/create', controllerAuth.createUser);
-
-  //app.post('/user/login', controllerAuth.login);
-}
+    //Updates a product via 'name'
+    app.post("/product/update", controllerRoutes.updateProduct);
+};
